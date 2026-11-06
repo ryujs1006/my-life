@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f7f6"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MY LIFE"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./style.css"><title>MY LIFE</title>
+</head>
+<body>
+<div class="app-shell">
+<header><div><div class="brand">MY LIFE</div><div class="tagline">YOUR LIFE, YOUR GOALS, YOUR JOURNEY</div></div><button id="installHelp" class="icon-btn" title="설치 안내">＋</button></header>
+<section class="welcome"><div><span class="eyebrow">PERSONAL LIFE PLANNER</span><h1>나의 인생을<br>하나씩 완성하기</h1><p id="todayLabel"></p></div><div class="sun">✦</div></section>
+<nav id="tabs">
+<button class="active" data-tab="today">오늘</button><button data-tab="calendar">일정</button><button data-tab="routine">루틴</button><button data-tab="goals">목표</button><button data-tab="bucket">버킷</button>
+</nav>
+<main id="view"></main>
+<footer>MY LIFE <span>작은 실천이 만드는 나의 인생</span></footer>
+</div>
+<dialog id="editor"><form method="dialog" id="editForm"><div class="modal-head"><h2 id="modalTitle">새 항목</h2><button class="icon-btn" value="cancel">×</button></div><label>제목<input id="entryTitle" required maxlength="100" placeholder="이름을 입력하세요"></label><label>내용 / 메모<textarea id="entryMemo" rows="3" placeholder="세부 내용이나 메모"></textarea></label><div id="extraFields"></div><div class="actions"><button class="secondary" value="cancel">취소</button><button class="primary" id="saveEntry" value="default">저장하기</button></div></form></dialog>
+<div id="toast" role="status"></div>
+<script src="./app.js"></script>
+</body></html>
